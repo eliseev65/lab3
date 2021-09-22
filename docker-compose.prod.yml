@@ -1,7 +1,7 @@
 version: "3.7"
 services:
     web:
-        image: ivangin/finalblog-web
+        image: eliseev65/blog-web
 #        build:
 #            context: ./finalblog
 #            dockerfile: Dockerfile.prod
@@ -21,8 +21,8 @@ services:
         env_file:
             - ./.env.prod.db
     nginx:
-        image: ivangin/finalblog-nginx
-#        build: ./nginx
+        
+        build: ./nginx
         volumes:
             - static_volume:/home/finalblog/web/static
         ports:
